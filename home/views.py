@@ -18,10 +18,10 @@ def home(requests):
 
 def get_quiz(requests):
     try:
-        questionobj=Question.objects.all()
+        questionobj=list(Question.objects.all())
         data=[]
 
-        random.shuffle(list(questionobj)) #this shuffles the object that is created 
+        random.shuffle(questionobj) #this shuffles the object that is created 
 
         for values in questionobj:
             data.append({
