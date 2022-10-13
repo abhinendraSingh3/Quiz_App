@@ -12,7 +12,7 @@ class Base(models.Model):
     updated_on=models.DateField(auto_now=True)
  
     class Meta:         #meta is class's skeleton or class's behaviour
-        abstract=True   #this means that this class is registered as a base class and we can register/use it anywhere.
+        abstract=True   # this means that this class is registered as a base class and we can register/use it anywhere.
 
 class Category(Base):
     category_name=models.CharField(max_length=100) 

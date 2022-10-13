@@ -6,10 +6,23 @@ import random
 def home(requests):
     return HttpResponse("hello bitches")
 
-def get_quiz(request):
+
+#this is response prototype that we are going to use below
+'''{
+    'status':True,
+    'data':[here we are storing data in a list
+        {this is for object}
+        ]
+}'''
+
+
+def get_quiz(requests):
     try:
         questionobj=Question.objects.all()
         data=[]
+
+        random.shuffle(list(questionobj)) #this shuffles the object that is created 
+
         for values in questionobj:
             data.append({
                 "category":values.category.category_name,
