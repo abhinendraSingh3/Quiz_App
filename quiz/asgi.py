@@ -1,5 +1,5 @@
 """
-ASGI config for quiz project.
+ASGI config for quiz project. 
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
